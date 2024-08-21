@@ -31,10 +31,16 @@ form.addEventListener("submit", (e) => {
     iXato3.classList.remove("hid");
   }
 
+  console.log(spmm.value);
+  console.log(oylar);
+  
   if (spmm.value < oylar && spmm.value > 0 && spmm.value < 13) {
     console.log("oy correct");
     m = oylar - spmm.value;
     iXato2.classList.add("hid");
+  }else if(spmm.value > oylar && spmm.value > 0 && spmm.value < 13){
+    y--;
+    m = 12 - Math.abs(oylar - spmm.value);
   } else {
     iXato2.classList.remove("hid");
   }
